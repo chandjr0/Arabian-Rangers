@@ -7,15 +7,15 @@ export function Footer() {
   return (
     <footer className="mt-24 border-t-2 border-ink bg-ink text-bone md:mt-32">
       <div className="shell py-14 pb-20 md:py-16 md:pb-16">
-        <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-5">
+        <div className="grid gap-10 md:grid-cols-12 md:items-start md:gap-x-10">
+          <div className="min-w-0 md:col-span-5">
             <Link
               to="/"
               aria-label="Arabian Rangers Tourism home"
-              className="group inline-flex items-start gap-4 transition-opacity duration-300 hover:opacity-90"
+              className="group flex max-w-full items-start gap-3 transition-opacity duration-300 hover:opacity-90 sm:gap-4"
             >
-              <BrandLogo className="mt-1 h-14 w-14 sm:h-16 sm:w-16" />
-              <h2 className="display-lg text-bone">
+              <BrandLogo className="mt-1 h-12 w-12 shrink-0 sm:h-14 sm:w-14" />
+              <h2 className="display-md min-w-0 text-bone">
                 Arabian
                 <br />
                 Rangers
@@ -24,7 +24,7 @@ export function Footer() {
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-sand">{brand.tagline}</p>
           </div>
 
-          <nav aria-label="Footer" className="flex flex-col gap-3 md:col-span-3">
+          <nav aria-label="Footer" className="flex min-w-0 flex-col gap-3 md:col-span-3">
             <Meta className="text-sand/70">Index</Meta>
             {nav.map((i) => (
               <Link
@@ -43,7 +43,7 @@ export function Footer() {
             </Link>
           </nav>
 
-          <div className="flex flex-col gap-3 md:col-span-2">
+          <div className="flex min-w-0 flex-col gap-3 md:col-span-2">
             <Meta className="text-sand/70">Social</Meta>
             {social.map((item) =>
               item.href ? (
@@ -64,7 +64,7 @@ export function Footer() {
             )}
           </div>
 
-          <div className="flex flex-col gap-3 md:col-span-2">
+          <div className="flex min-w-0 flex-col gap-3 md:col-span-2">
             <Meta className="text-sand/70">Registry</Meta>
             <span className="meta text-bone">{brand.category}</span>
             <span className="meta text-bone">United Arab Emirates</span>
